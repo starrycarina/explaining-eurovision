@@ -11,7 +11,7 @@ library(tidytext)
 library(textdata)
 
 # LOAD DATA
-setwd("/Users/carinaclewley/Documents/dissertation/data")
+setwd("./dissertation/data")
 Sys.setenv(SHAPE_RESTORE_SHX = "YES")
 
 # geographical
@@ -153,7 +153,7 @@ border_geometries <- geospatial_data_clean %>%
   filter(!is.na(geometry)) %>%
   distinct(to_country, year, .keep_all = TRUE) %>%
   st_as_sf() %>%
-  st_make_valid()   # <-- add this line
+  st_make_valid()
 
 # join capital coords for both from and to country
 voting_data_geo <- voting_data %>%
