@@ -9,8 +9,7 @@ library(jsonlite)
 library(tidytext)
 library(textdata)
 
-# LOAD DATA
-setwd("/Users/carinaclewley/Documents/dissertation/data")
+setwd("./dissertation/data")
 Sys.setenv(SHAPE_RESTORE_SHX = "YES")
 
 # internal politics
@@ -41,9 +40,7 @@ participation <- contestants_data %>%
 music_data <- read_csv("every eurovision song ever.csv")
 more_music_data <-read_csv("merged_table.csv")
 even_more_music_data <- read_csv("Eurovision songs.csv")
-lyrics_json <- fromJSON("https://storage.googleapis.com/kagglesdsdata/datasets/883302/11631473/eurovision-lyrics-2025.json?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gcp-kaggle-com%40kaggle-161607.iam.gserviceaccount.com%2F20260313%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20260313T102336Z&X-Goog-Expires=259200&X-Goog-SignedHeaders=host&X-Goog-Signature=21dd44b16b469d80fd9dfa35d1ff346a5a6e03979fb1f77db7fa4b3f4f9992a8e2748dffc7365f168acc2ed4a7a665dacc9f4a7c54211c31f511c36bb8e77f2f06fd2c82b45142877c228b59e9f0acd15ba0791a41bcb4dd9bcd3612d745836c642923c6cdf335503816060c3e66811e670a4747dc12abf9c6e1e3bce1b43ac573da9120ad38f0e03f7dd912dc8f52ec7f10f1916b415e49b8fc3cd44ef00542f5616ac6ec02a0ee0af13e10bfce37b6e34f24406a5561571f736005c2b058e50081f031bd1871c8b734afa52a7ec366a96bf92c52f56bdb0c33916612799826698a66ebf1144e46d0e7f7d295dcc984087cdcd255898170e07bf738439f5f43", simplifyDataFrame = TRUE, flatten = TRUE)
-
-# CLEAN MUSIC DATA
+lyrics_json <- fromJSON("https://long_link_containing_lyrics_data", simplifyDataFrame = TRUE, flatten = TRUE)
 
 # normalize and sort word function
 normalize <- function(x) {
