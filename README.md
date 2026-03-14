@@ -1,1 +1,1 @@
-votes and contestants are the main datasets that all other data is matched to, as can be seen in the R files that use them
+votes and contestants are the main datasets that all other data is matched to, as can be seen in the R files that use them. I aim to have comprehensive matched datasets for geographical, musical, political, linguistic, economic and other cultural factors that research suggests affect outcomes.
