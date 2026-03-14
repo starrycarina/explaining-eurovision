@@ -1,0 +1,1 @@
+music_data_clean.csv contains audio data extracted from the tracks, lyrics, language of lyrics and english translations if needed, as well as lyrical features such as sentiment scores, emotion-based features and assigned 'story archetypes' 
